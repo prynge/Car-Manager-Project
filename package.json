@@ -1,0 +1,16 @@
+{
+  "name": "cmproject-package",
+  "version": "1.0.0",
+  "scripts": {
+    "install": "cd ./cmproject/ && npm i && cd ../cmproject-backend/ && npm i && cd..",
+    "start": "concurrently --kill-others \"npm run start-api\" \"npm run start-app\"",
+    "start-app": "cd ./cmproject/ && npm run serve --open",
+    "start-api": "cd ./cmproject-backend/ && node server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

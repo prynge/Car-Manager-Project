@@ -1,0 +1,35 @@
+{
+  "name": "cmproject-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand --forceExit --detectOpenHandles spec",
+    "migrate-test": "cross-env NODE_ENV=test sequelize db:migrate",
+    "create-test": "cross-env NODE_ENV=test sequelize db:create",
+    "create-dev": "cross-env NODE_ENV=development sequelize db:create",
+    "migrate-dev": "cross-env NODE_ENV=development sequelize db:migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "factory-girl": "^5.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.9",
+    "sequelize": "^6.6.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^27.0.6",
+    "supertest": "^6.1.3"
+  }
+}
